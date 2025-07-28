@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>3THEBOX V-TIPI</title>
+  <title>V-TIPI</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     body {
@@ -95,23 +95,25 @@
 
   <model-viewer 
     id="dimension-demo"
-    src="https://raw.githubusercontent.com/webbox123/v-tipi/refs/heads/main/v-tipi-rev3.glb"
+    src="https://raw.githubusercontent.com/webbox123/v-tipi/refs/heads/main/untitledSON.glb"
     alt="A 3D model of an armchair."
     ar 
-    ar-modes="webxr scene-viewer quick-look" 
+    ar-modes="scene-viewer quick-look" 
     ar-scale="fixed"
     ar-placement="floor"
     camera-orbit="155deg auto auto"
     max-camera-orbit="Infinity 120deg 100%"
     min-camera-orbit="Infinity 30deg 70%"
-    exposure="1"
     shadow-intensity="1"
     camera-controls touch-action="pan-y"
-    tone-mapping="reinhard"
-    loading="eager"
+    tone-mapping="neutral"
     environment-image="neutral"
-    reveal="auto"
-     dpr="2"
+    
+    exposure="1.2"
+    shadow-intensity="1.5"
+    shadow-softness="0.5"
+
+    
     style="width: 100%; height: 100%;">
     
     <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
@@ -133,7 +135,6 @@
       <line class="dimensionLine"></line>
       <line class="dimensionLine"></line>
     </svg>
-    xr-environment>
   </model-viewer>
 </div>
 
@@ -241,11 +242,18 @@
         const [material] = modelViewer.model.materials;
 
         material.pbrMetallicRoughness.setBaseColorFactor([r, g, b, 1]);
-        material.pbrMetallicRoughness.setMetallicFactor(1.0);  // tam metal
-        material.pbrMetallicRoughness.setRoughnessFactor(0.0); // ayna gibi
+        material.pbrMetallicRoughness.setMetallicFactor(0.7);  // tam metal
+        material.pbrMetallicRoughness.setRoughnessFactor(0.3); // ayna gibi
+
+   
       });
     });
   });
+
+
+
+
+  
 </script>
 
 </body>
