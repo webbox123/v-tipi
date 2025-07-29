@@ -110,6 +110,33 @@
     }
 
     .hide { display: none; }
+
+
+       .custom-ar-button {
+        background: none;
+        border: none;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: auto;
+        height: 92px;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .custom-ar-button img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+
+
+
+
+
+
+    
   </style>
 </head>
 <body>
@@ -138,19 +165,9 @@
     shadow-softness="0.5"
     style="width: 100%; height: 100%;">
 
-    <button 
-      slot="ar-button" 
-      style="background-color: #2B59BB; 
-      border-radius: 4px; 
-      border: none; 
-      width: auto;
-      height: 60px;
-      color: rgba(255, 255, 255, 0.8);
-      font-family: Futura, Helvetica Neue, sans-serif;
-      font-size: 1em;
-      position: absolute; 
-      bottom: 16px; 
-      right: 16px; ">Activate AR</button>
+    <button slot="ar-button" class="custom-ar-button">
+        <img src="https://raw.githubusercontent.com/webbox123/v-tipi/refs/heads/main/ar-button.png" alt="AR Başlat" />
+      </button>
     
     <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
     <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
