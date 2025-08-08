@@ -11,41 +11,6 @@
       background: #f0f0f0;
     }
 
-///////////////////////////////////////////////////////////////////////////////////////    
-/* Spinner Container */
-    .spinner-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.7); /* Sayfanın arka planı opak */
-      z-index: 9999; /* Her şeyin üstünde */
-    }
-
-    /* Spinner */
-    .spinner {
-      border: 8px solid #f3f3f3; /* Gri renk */
-      border-top: 8px solid #3498db; /* Mavi renk */
-      border-radius: 50%; /* Yuvarlak yapmak için */
-      width: 50px;
-      height: 50px;
-      animation: spin 1.5s linear infinite; /* Döndürme animasyonu */
-    }
-
-    /* Döndürme animasyonu */
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
     
     .viewer-wrapper {
       position: relative;
@@ -166,24 +131,12 @@
       }
 
 
-
-
-
-
-
     
   </style>
 </head>
 <body>
-////////////////////////////////////////////////////////
-<!-- Spinner Yükleme Animasyonu -->
-  <div id="loading-spinner" class="spinner-container">
-    <div class="spinner"></div>
-  </div>
-/////////////////////////////////////////////////////////
 
-
-  
+ 
 <div class="viewer-wrapper">
   <img class="top-right-image" src="https://raw.githubusercontent.com/webbox123/v-tipi/refs/heads/main/360deg.png" alt="Logo">
   <img class="top-left-image" src="https://raw.githubusercontent.com/webbox123/v-tipi/refs/heads/main/thebox.png" alt="Logo">
@@ -249,15 +202,6 @@
 
 <script type="module">
 
-///////////////////////////////////////////
-  // Sayfa tamamen yüklendiğinde spinner'ı gizle
-    window.addEventListener('load', () => {
-      document.getElementById('loading-spinner').style.display = 'none';
-    });
-///////////////////////////////////////////
-
-
-  
   const modelViewer = document.querySelector('#dimension-demo');
   const checkbox = document.querySelector('#show-dimensions');
   
@@ -280,20 +224,6 @@
    
       });
     });
-
-//////////////////////////////////////////////////////////////////////////  
-
-    // Sayfa yüklendiğinde spinner'ı gizle
-    window.addEventListener('load', () => {
-      const spinner = document.getElementById('loading-spinner');
-      spinner.style.display = 'none'; // Spinner'ı gizle
-    });
-  
-//////////////////////////////////////////////////////////////////////////
-
-
-  
-
 
 
 
@@ -398,6 +328,7 @@
 
 </body>
 </html>
+
 
 
 
