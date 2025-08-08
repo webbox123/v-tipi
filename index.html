@@ -232,7 +232,11 @@
 
 
 
-  const dimElements = [...modelViewer.querySelectorAll('button'), modelViewer.querySelector('#dimLines')];
+ // const dimElements = [...modelViewer.querySelectorAll('button'), modelViewer.querySelector('#dimLines')];
+
+  const dimElements = [...[...modelViewer.querySelectorAll('button')].filter(btn => !btn.classList.contains('custom-ar-button')),
+  modelViewer.querySelector('#dimLines')];
+
 
   function setVisibility(visible) {
     dimElements.forEach((element) => {
@@ -329,4 +333,5 @@
 
 </body>
 </html>
+
 
